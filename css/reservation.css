@@ -1,0 +1,165 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  width: auto;
+}
+
+.map-section,
+.form-section {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  border: 1px solid #eee;
+}
+
+.map-section {
+  flex: 1;
+  min-width: 300px;
+  margin-right: 20px;
+  text-align: center;
+  max-height: 90vh;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-section {
+  flex: 1;
+  max-height: 90vh;
+  min-height: 90vh;
+}
+.form-wrap {
+  min-width: 300px;
+  overflow-y: scroll;
+  max-height: 80%;
+  min-height: 80%;
+  margin-bottom: 1rem;
+}
+
+.form-section h2 {
+  /* font-size: 14px; */
+ 
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  width: 90%;
+  color: #636363;
+}
+
+.form-group input,
+.form-group select,
+.form-group button {
+  /* width: 100%; */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 80%;
+}
+
+.form-group input[type="file"] {
+  padding: 5px;
+}
+
+.form-group button {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.form-group button:hover {
+  background-color: #333;
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.legend span {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.legend span::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legend .available1::before {
+  background-color: green;
+}
+
+.legend .occupied::before {
+  background-color: red;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .map-section {
+    margin-right: 0;
+    /* margin-bottom: 20px;
+    max-height: auto;
+    min-height: auto; */
+    height: 100%;
+    max-height: none;
+    min-height: none;
+  }
+  .form-section {
+    flex: 1;
+    height: 100% !important;
+    max-height: none;
+    min-height: none;
+    margin-top: 1rem;
+  }
+  .form-wrap {
+    min-width: 300px;
+    overflow: visible;
+    /* overflow-y: hidden; */
+    /* max-height: auto;
+    min-height: auto; */
+    margin-bottom: 1rem;
+  }
+  .selection-con {
+    /* display: none; */
+    margin-top: 10px;
+    height: 55%;
+    /* overflow: hidden; */
+  }
+  
+  .selection-wrap {
+    min-width: 300px;
+    padding-top: 0rem;
+    /* overflow: scroll; */
+    /* max-height:auto;
+    min-height:auto; */
+    overflow: visible;
+    border-radius: 15px;
+
+    margin-bottom: 1rem;
+  }
+}

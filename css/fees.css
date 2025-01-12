@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* Container for all cards */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  animation: fadeInContainer 0.5s forwards;
+}
+
+/* Card container */
+.card {
+  border: 1px solid #ebebeb;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
+  min-height: 400px;
+
+  box-sizing: border-box;
+  margin: 10px;
+  opacity: 0;
+  transform: translateY(20px); /* Start below */
+  animation: fadeInCard 0.5s forwards;
+}
+
+/* Sequential animation for each card */
+.card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeInContainer {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInCard {
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+  }
+}
+
+/* Card header */
+.card-header h3 {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Card body */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-body h5,
+.card-body h6 {
+  margin: 10px 0px;
+  font-size: 13px;
+  font-weight: bold;
+
+  /* margin: 10px 0; */
+  color: #555;
+}
+
+/* Paragraphs and list items inside cards */
+.card-body p,
+.card-body ul {
+  font-size: 11px;
+  width: 90%;
+
+  /* margin-left: 40px; */
+  /* text-align: left; */
+  /* margin-left: 20px; */
+}
+
+.card-body ul {
+  list-style: none;
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px 5px;
+  color: #666;
+}
+
+.card-body ul li {
+  margin-bottom: 5px;
+  white-space: nowrap;
+}
+
+/* Ensure readability and spacing */
+.card-body p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Hover effect for cards */
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+.ul-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .card {
+    width: 100%; /* Full width for smaller screens */
+  }
+}

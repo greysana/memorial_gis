@@ -1,0 +1,137 @@
+#map {
+  height: 250px;
+  width: 100%;
+  position: relative;
+  z-index: 99;
+}
+
+.controls {
+  margin: 10px 0;
+}
+.leaflet-container {
+  position: relative;
+  z-index: 99;
+}
+.controls button {
+  padding: 8px 12px;
+  margin-right: 5px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background-color: #45a049;
+}
+
+.plotGrid {
+  /* width: 300px;
+    height: 300px; */
+  /* background-color: #45a049; */
+  margin: 1rem;
+}
+
+.plot-box {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin: 5px;
+  text-align: center;
+  line-height: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.available {
+  background-color: green;
+}
+
+.unavailable {
+  background-color: red;
+}
+
+#plotGrid {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+}
+.selection-con {
+  /* display: none; */
+  margin-top: 10px;
+  height: 220px;
+  /* flex-direction: column; */
+
+  /* overflow: hidden; */
+}
+.selection-con h3 {
+  margin: 0px;
+  padding: 0px;
+}
+.selection-wrap {
+  min-width: 300px;
+  overflow: scroll;
+  max-height: 90%;
+  min-height: 90%;
+  /* padding: 1rem; */
+  /* padding-top: 4rem; */
+  background-color: #f4f4f4;
+  margin-top: 1rem;
+  /* margin-bottom: 1rem; */
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
+.plot-cell {
+  width: 50px;
+  /* Adjust width as needed */
+  height: 50px;
+  /* Adjust height as needed */
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.plot-cell:hover {
+  outline: 3px solid #ccc;
+  opacity: 0.8;
+}
+
+.plot-box {
+  background-color: lightgray;
+}
+
+.available {
+  background-color: green;
+}
+
+.unavailable {
+  background-color: red;
+}
+
+.highlighted {
+  outline: 3px solid #333;
+  opacity: 1;
+
+  /* Change this to any color you prefer */
+  /* background-color: yellow; */
+  /* Optional: change the background when selected */
+}
+
+.empty {
+  background-color: white;
+  color: #bbb;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  text-align: center;
+  /* color: white; */
+  font-weight: bold;
+}
